@@ -6,6 +6,7 @@ import Header from './Components/Header/Header';
 import About from './Components/About/About';
 import { client } from './client';
 import Climbs from './Components/Climbs/Climbs';
+import Footer from './Components/Footer/Footer'
 
 export default class App extends React.Component {
 	state = {
@@ -33,6 +34,16 @@ export default class App extends React.Component {
 					</nav>
 					<main>
 						<Switch>
+							<Route exact path='/'>
+								<h1 id='home-logo'>
+									<i class='fas fa-mountain'></i>Climb Time!
+								</h1>
+								<h2 className='motto'>
+									Climb Time! Find some fun climbing routes near you!
+								</h2>
+								<hr></hr>
+								<h4>Climb Time! For all your climbing needs!</h4>
+							</Route>
 							<Route path='/climbs'>
 								<Climbs climbs={this.state.articles} />
 							</Route>
@@ -41,6 +52,9 @@ export default class App extends React.Component {
 							</Route>
 						</Switch>
 					</main>
+					<footer>
+						<Footer />
+					</footer>
 				</div>
 			</div>
 		);
