@@ -16,7 +16,7 @@ export default function Header() {
 					<NavDropdown title='Dropdown' id='collasible-nav-dropdown'>
 						<NavDropdown.Item href='/about'>About Me</NavDropdown.Item>
 						<NavDropdown.Divider />
-						<NavDropdown.Item href='/linkedin'>
+						<NavDropdown.Item href='https://www.linkedin.com/in/jaimebondocjr/'>
 							LinkedIn
 						</NavDropdown.Item>
 					</NavDropdown>
