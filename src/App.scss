@@ -2,8 +2,8 @@
 	text-align: center;
 	color: white;
 	font-family: 'Big Shoulders Inline Text', cursive;
-  background-color: #79d1c3;
-  width: 100%;
+	background-color: #79d1c3;
+	width: 100%;
 }
 
 body {
@@ -14,9 +14,18 @@ body {
 	background-attachment: fixed;
 }
 
-.post img {
-	display: block;
-	width: 100%;
+.post {
+	background-color: #044a3a;
+	border: white;
+
+	title {
+		text-decoration: underline;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
 }
 
 main {
@@ -24,7 +33,10 @@ main {
 		display: flex;
 		flex-direction: column;
 		margin: 0 auto;
-		background-color: #79d1c3;
+		background-color:  #044a3a;
 		opacity: 65%;
-	}
+  }
+  motto {
+    background-color: #044a3a;
+  }
 }
