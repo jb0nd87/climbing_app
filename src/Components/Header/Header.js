@@ -9,7 +9,7 @@ export default function Header() {
 			<Navbar.Brand href='/'>
 				<i className='fas fa-mountain'></i> Climb Time!
 			</Navbar.Brand>
-			<Navbar.Toggle aria-controls='responsive-navbar-nav' />
+			<Navbar.Toggle aria-controls='responsive-navbar-nav' id='hamburger' />
 			<Navbar.Collapse id='responsive-navbar-nav'>
 				<Nav className='mr-auto'>
 					<Nav.Link href='/climbs'>Climb Routes</Nav.Link>
