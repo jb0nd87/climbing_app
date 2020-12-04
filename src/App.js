@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Components/Header/Header';
+import About from './Components/About/About';
+import { client } from './client';
+import Climbs from './Components/Climbs/Climbs';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+	state = {
+		articles: [],
+	};
+
+	componentDidMount() {
+		client
+			.getEntries()
+			.then((response) => {
+				console.log(response);
+				this.setState({
+					articles: response.items,
+				});
+			})
+			.catch(console.error);
+	}
+
+	render() {
+		return (
+			<div className='App'>
+				<div className='container'>
+					<nav>
+						<Header />
+					</nav>
+					<main>
+						<Switch>
+							<Route path='/climbs'>
+								<Climbs climbs={this.state.articles} />
+							</Route>
+							<Route path='/about'>
+								<About />
+							</Route>
+						</Switch>
+					</main>
+				</div>
+			</div>
+		);
+	}
 }
-
-export default App;
