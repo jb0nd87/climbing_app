@@ -42,7 +42,7 @@ export default class App extends React.Component {
 									Climb Time! Find some fun climbing routes near you!
 								</h2>
 								<hr></hr>
-								<h4>Climb Time! For all your climbing needs!</h4>
+								<h4>For all your climbing needs! Find a climb near you today!</h4>
 							</Route>
 							<Route path='/climbs'>
 								<Climbs climbs={this.state.articles} />
